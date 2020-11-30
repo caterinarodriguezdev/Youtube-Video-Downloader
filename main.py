@@ -17,8 +17,8 @@ label1.pack()
 linkVideo = StringVar()
 
 # textvariable attribute saves input text into the specified variable, in this case link
-linkField = Entry(window, width=60, textvariable=linkVideo)
-linkField.pack()
+linkField = Entry(window, width=60, font='Adumu', textvariable=linkVideo)
+linkField.pack(ipady=7)
 
 # Canvas for image
 canvas_width = 100
