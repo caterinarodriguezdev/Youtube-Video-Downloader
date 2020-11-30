@@ -12,12 +12,11 @@ label1.pack()
 linkVideo = StringVar()
 
 # textvariable attribute saves input text into the specified variable, in this case link
-linkField = Entry(window, width=60, textvariable='linkVideo')
+linkField = Entry(window, width=60, textvariable=linkVideo)
 linkField.pack()
 
 def downloadVideo():
-    print("hey there biatch")
-    print(str(linkVideo.get()))
+    print(linkVideo.get())
     # youtubeVideo = YouTube(link).streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
     # youtubeVideo.download('C:/Users/Caterina/PycharmProjects/youtubeVideos')
 
