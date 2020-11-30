@@ -1,6 +1,8 @@
 from pytube import YouTube
 # I will use this module to create a Graphical User Interface
 from tkinter import *
+import os
+from pathlib import Path
 
 window = Tk()
 window.geometry('600x300')
@@ -16,9 +18,12 @@ linkField = Entry(window, width=60, textvariable=linkVideo)
 linkField.pack()
 
 def downloadVideo():
-    print(linkVideo.get())
-    # youtubeVideo = YouTube(link).streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
-    # youtubeVideo.download('C:/Users/Caterina/PycharmProjects/youtubeVideos')
+    linkVideoUrl = linkVideo.get()
+    youtubeVideo = YouTube(linkVideoUrl).streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
+    # if not os.path.exists('\youtubeVideos'):
+    #     os.makedirs('\youtubeVideos')
+    pathDownloadFolder = str(os.path.join(Path.home(),'Descargas'))
+    youtubeVideo.download(pathDownloadFolder)
 
 
 # command attribute shows which function will be ran when button is clicked
