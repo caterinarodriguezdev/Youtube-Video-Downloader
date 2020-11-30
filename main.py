@@ -11,6 +11,10 @@ window.geometry('700x300')
 window.title('Torrapipes Youtube Video Downloader')
 window.configure(bg='#2A2F32')
 
+# setting icon photo
+iconPhoto = PhotoImage(file='assets/icon.png')
+window.iconphoto(False, iconPhoto)
+
 label1 = Label(window, text="Paste a youtube video link here", font=('Adumu', 30), bg='#2A2F32', fg='white')
 label1.pack()
 
