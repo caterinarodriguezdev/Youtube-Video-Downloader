@@ -4,6 +4,17 @@ from tkinter import *
 
 window = Tk()
 window.geometry('600x300')
+window.title('Torrapipes Youtube Video Downloader')
+
+label1 = Label(window, text="Paste Youtube Video Link Here", font=('bold', 20))
+label1.pack()
+
+linkField = Entry(window, width=60)
+linkField.pack()
+
+# command attribute shows which function will be ran when button is clicked
+downloadButton = Button(window, text='Download Video', width=20, bg='red', fg='white', command='downloadVideo')
+downloadButton.pack()
 
 # This function will create an infinite loop that is used to run the application,
 # wait for an event to occur and process the event as long as the window is not closed.
