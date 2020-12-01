@@ -2,9 +2,9 @@ from pytube import YouTube
 # I will use this module to create a Graphical User Interface
 from tkinter import StringVar, Label, Entry, Tk, messagebox, Button, Canvas, PhotoImage, font
 
-
 import os
 from pathlib import Path
+
 
 window = Tk()
 window.geometry('700x300')
@@ -12,7 +12,7 @@ window.title('Torrapipes Youtube Video Downloader')
 window.configure(bg='#2A2F32')
 
 # setting icon photo
-iconPhoto = PhotoImage(file='assets/icon.png')
+iconPhoto = PhotoImage(file='./assets/icon.png')
 window.iconphoto(False, iconPhoto)
 
 label1 = Label(window, text="Paste a youtube video link here", font=('Adumu', 30), bg='#2A2F32', fg='white')
@@ -34,7 +34,7 @@ canvas = Canvas(window,
 canvas.configure(bg='red')
 canvas.pack()
 
-img = PhotoImage(file='assets/pyb.pgm')
+img = PhotoImage(file='./assets/pyb.pgm')
 canvas.create_image(50,50, image=img)
 
 def downloadVideo():
